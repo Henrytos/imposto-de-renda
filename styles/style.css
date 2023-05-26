@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kufam:ital@1&family=Poppins:ital@0;1&display=swap");
+:root {
+  --color-primary: #33e29a;
+  --color-terceary: #4caf50;
+  --color-sencudary: #525252;
+  --color-quartyary: #f5f5f5;
+  --font-text: "Kufam", sans-serif;
+  --font-title: "Poppins", sans-serif;
+}
+@font-face {
+  font-family: "font-title";
+  src: url("../assets/fonts/Rostley_PERSONAL_USE_ONLY.otf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-title);
+}
+main {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../assets/imgs/backgroud-leão.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Cria uma gradação em todas as direções */
+}
+/* cabeçalho */
+header {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: center;
+  gap: 20px;
+  height: 120px;
+  padding-top: 40px;
+  width: 100%;
+}
+header > div {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+}
+
+header > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header > div > div > img {
+  width: 100px;
+}
+header > div > div > span {
+  font-family: var(--font-title);
+  font-size: 32px;
+  color: #fff;
+}
+header > div > nav {
+  display: flex;
+  gap: 48px;
+}
+.btn {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 32px;
+  gap: 8px;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 6px;
+}
+.btn::after {
+  content: " ";
+  width: 0%;
+  height: 4px;
+  background-color: var(--color-primary);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: 0.5s ease-in-out;
+}
+.btn:hover::after {
+  width: 100%;
+}
+
+#focus {
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(2.5px);
+  color: var(--color-primary);
+}
+/*Corpo*/
+main > section {
+  margin: auto;
+  padding: 30px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(38, 38, 38, 0.46);
+  border: 1px solid rgba(115, 115, 115, 0.5);
+  backdrop-filter: blur(2.5px);
+  /* Note: backdrop-filter has minimal browser support */
+
+  border-radius: 12px;
+  gap: 20px;
+}
+main > section > iframe {
+  width: 532px;
+  height: 300px;
+}
+main > section > div > p,
+h3 {
+  text-indent: 20px;
+  color: white;
+  text-align: justify;
+}
+/*Rodapé*/
+footer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+footer > span {
+  display: flex;
+  gap: 30px;
+}
+footer > span > a {
+  transition: 0.5s ease-in-out;
+  border-radius: 10px;
+}
+footer > span > a:nth-child(1):hover {
+  background-color: #3b5998;
+}
+footer > span > a:nth-child(2):hover {
+  background-color: #171515;
+}
+footer > span > a:nth-child(3):hover {
+  background-color: #f205cb;
+}
+footer > span > a:nth-child(4):hover {
+  background-color: #0e76a8;
+}
+footer > span > a:nth-child(5):hover {
+  background-color: #2bb741;
+}
