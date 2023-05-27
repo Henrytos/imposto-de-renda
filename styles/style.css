@@ -28,26 +28,23 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 20px;
   /* Cria uma gradação em todas as direções */
 }
-/* cabeçalho */
+/* ----------------cabeçalho --------------------*/
 header {
   display: flex;
   flex-direction: column;
   align-content: space-between;
   justify-content: center;
   gap: 20px;
-  height: 120px;
-  padding-top: 40px;
-  width: 100%;
+  height: 15vh;
 }
 header > div {
   display: flex;
-
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 48px;
 }
 
 header > div > div {
@@ -102,11 +99,12 @@ header > div > nav {
   backdrop-filter: blur(2.5px);
   color: var(--color-primary);
 }
-/*Corpo*/
+/*-----------------Corpo------------------------*/
 main > section {
   margin: auto;
   padding: 30px;
   width: 700px;
+  max-height: 75vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -129,28 +127,55 @@ h3 {
   color: white;
   text-align: justify;
 }
-/*Rodapé*/
+/*------------------Rodapé--------------------*/
 footer {
   display: flex;
   justify-content: center;
   align-content: center;
+  height: 6vh;
 }
+/* espaçamento entre cada elemento */
 footer > span {
   display: flex;
-  gap: 30px;
+  gap: 0px 30px;
 }
 footer > span > a {
-  transition: 0.5s ease-in-out;
-  border-radius: 10px;
+  all: unset;
+  transition: 0.3s ease-in-out;
+  width: 50px;
+  height: 50px;
+  background: rgba(136, 133, 133, 0.46);
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
+footer > span > a:hover {
+  width: 150px;
+  justify-content: center;
+}
+/* imagem ddo icone rodapé */
+footer > span > a > img {
+  width: 40px;
+}
+.text-social-midia {
+  color: black;
+  font-weight: bold;
+}
+
+/* cada elemento do rodamento*/
 footer > span > a:nth-child(1):hover {
   background-color: #3b5998;
 }
+
 footer > span > a:nth-child(2):hover {
-  background-color: #171515;
+  background-color: #ffffff;
 }
 footer > span > a:nth-child(3):hover {
-  background-color: #f205cb;
+  background-color: #ec3377;
 }
 footer > span > a:nth-child(4):hover {
   background-color: #0e76a8;
