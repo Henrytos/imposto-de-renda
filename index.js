@@ -45,7 +45,7 @@ function colorTextLeanguage(selectedOption) {
             break;
 
         case "Inglês":
-            textLeanguage.style.color = "#3F51B5";
+            selectElement.style.color = "#3F51B5";
 
             break;
 
