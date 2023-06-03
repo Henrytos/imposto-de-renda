@@ -1,120 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Imposto de renda</title>
-    <link rel="stylesheet" href="styles/style.css" />
-    <link
-      rel="shortcut icon"
-      href="assets/icons/leão.png"
-      type="image/x-icon"
-    />
-    <script src="index.js" defer type="module"></script>
-  </head>
 
-  <body>
-    <main>
-      <!-- CABEÇALHO -->
-      <header>
-        <div>
-          <div>
-            <img src="assets/imgs/logo-leão.png" alt="logo leão" />
-            <span>Imposto de renda</span>
-            <span class="nav-mobile">
-            <a class="btn-mobile">O QUE É?</a>
-            <a class="btn-mobile">LOCAL</a>
-            <a class="btn-mobile">CALCULADORA</a>
-            <a class="btn-mobile">CONTATO</a>
-            </span>
-          </div>
-          <nav>
-            <a class="btn" id="focus">O QUE É?</a>
-            <a class="btn">LOCAL</a>
-            <a class="btn">CALCULADORA</a>
-            <a class="btn">CONTATO</a>
-          </nav>
-        </div>
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imposto de renda</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="shortcut icon" href="assets/icons/leão.png" type="image/x-icon" />
+  <script src="index.js" defer type="module"></script>
+  <script src="mobile-navbar.js" defer type="module"></script>
+</head>
 
-      <!-- VIDEO -->
-      <section>
-        <h3>Oque é imposto de Renda?</h3>
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/IN9fwPeBrHs"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+<body>
+  <main>
+    <!-- CABEÇALHO -->
+    <header>
+      <div>
         <div>
-          <h3>Resumo:</h3>
-          <p>
-            Imposto de renda é um tributo cobrado pelo governo sobre a renda de
-            pessoas físicas e jurídicas. Pessoas físicas pagam com base em seus
-            rendimentos anuais, enquanto empresas pagam sobre seus lucros. O
-            imposto é calculado com uma alíquota que varia de acordo com a faixa
-            de renda ou o tipo de empresa. A arrecadação é utilizada para
-            financiar gastos públicos. Regras e regulamentações variam entre
-            países.
-          </p>
-          <p>
-            Imposto de renda é um tributo cobrado pelo governo sobre a renda de
-            pessoas físicas e jurídicas. Pessoas físicas pagam com base em seus
-            rendimentos anuais, enquanto empresas pagam sobre seus lucros. O
-            imposto é calculado com uma alíquota que varia de acordo com a faixa
-            de renda ou o tipo de empresa. A arrecadação é utilizada para
-            financiar gastos públicos. Regras e regulamentações variam entre
-            países.
-          </p>
-          <p>
-            Imposto de renda é um tributo cobrado pelo governo sobre a renda de
-            pessoas físicas e jurídicas. Pessoas físicas pagam com base em seus
-            rendimentos anuais, enquanto empresas pagam sobre seus lucros. O
-            imposto é calculado com uma alíquota que varia de acordo com a faixa
-            de renda ou o tipo de empresa. A arrecadação é utilizada para
-            financiar gastos públicos. Regras e regulamentações variam entre
-            países.
-          </p>
-          <p>
-            Imposto de renda é um tributo cobrado pelo governo sobre a renda de
-            pessoas físicas e jurídicas. Pessoas físicas pagam com base em seus
-            rendimentos anuais, enquanto empresas pagam sobre seus lucros. O
-            imposto é calculado com uma alíquota que varia de acordo com a faixa
-            de renda ou o tipo de empresa. A arrecadação é utilizada para
-            financiar gastos públicos. Regras e regulamentações variam entre
-            países.
-          </p>
+          <img src="assets/imgs/logo-leão.png" alt="logo leão" />
+          <span>Imposto de renda</span>
+          <!-- menu responsivo -->
+           <nav>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
         </div>
-      </section>
-      <footer>
-        <span>
-          <a
-            href="https://www.facebook.com/profile.php?id=100035259228757"
-            id="facebook"
-            target="_blank"
-            ><img src="assets/icons/facebook.svg" alt="facebook" />
-           </a>
-          <a href="https://github.com/Henrytos" target="_blank"
-            id="github"  
-          ><img src="assets/icons/github.svg" alt="github" />
-            </a>
-          <a href="https://www.instagram.com/dev_henry16/" target="_blank"
-            id="instagram"  
-          ><img src="assets/icons/instagram.svg" alt="instagram" /></a>
-          <a
-            href="https://www.linkedin.com/in/henry-franz-617841245/"
-            id="linkedin"
-            target="_blank"
-            ><img src="assets/icons/linkedin.svg" alt="linkedin" />
-           
-          <a href="" target="_blank"
-            id="whatsapp"  
-          ><img src="assets/icons/whatsapp.svg" alt="whatsapp" />
-            
-        </span>
-      </footer>
-    </main>
-  </body>
+        <ul class="nav-list">
+           <li>  <span class="languages">
+            <img src="assets/imgs/bandeira/Português.png" alt="bandeira do brazil" id="bandeiras"> 
+            <select name="idioma" id="idioma" class="languages-type">
+              <option value="Português" id="Português" class="language">Português</option>
+              <option value="Inglês" id="Inglês" class="language">Inglês(EUA)</option>
+              <option value="Espanhol" id="Espanhol" class="language">Espanhol</option>
+              <option value="Mandarin" id="mandarin" class="language">Mandarin</option>
+            </select>
+          </span></li>
+          <li><a href="#" class="btn" >O QUE É?</a></li>
+          <li><a href="#"class="btn" >LOCAL</a></li>
+          <li><a href="#"class="btn" >CALCULADORA</a></li>
+          <li><a href="#"class="btn" >CONTATO</a></li>
+        </ul>
+      </nav>
+        </div>
+        <nav>
+          <a class="btn" id="focus">O QUE É?</a>
+          <a class="btn">LOCAL</a>
+          <a class="btn">CALCULADORA</a>
+          <a class="btn">CONTATO</a>
+          <span class="languages">
+            <img src="assets/imgs/bandeira/Português.png" alt="bandeira do brazil" id="bandeiras"> 
+            <select name="idioma" id="idioma2" class="languages-type">
+              <option value="Português" id="Português" class="language">Português</option>
+              <option value="Inglês" id="Inglês" class="language">Inglês(EUA)</option>
+              <option value="Espanhol" id="Espanhol" class="language">Espanhol</option>
+              <option value="Mandarin" id="mandarin" class="language">Mandarin</option>
+            </select>
+          </span>
+        </nav>
+      </div>
+    </header>
+
+    <!-- VIDEO -->
+    <section>
+      <h3>Oque é imposto de Renda?</h3>
+      <iframe src="https://www.youtube-nocookie.com/embed/IN9fwPeBrHs" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+      <div>
+        <h3>Resumo:</h3>
+        <p>
+          Imposto de renda é um tributo cobrado pelo governo sobre a renda de
+          pessoas físicas e jurídicas. Pessoas físicas pagam com base em seus
+          rendimentos anuais, enquanto empresas pagam sobre seus lucros. O
+          imposto é calculado com uma alíquota que varia de acordo com a faixa
+          de renda ou o tipo de empresa. A arrecadação é utilizada para
+          financiar gastos públicos. Regras e regulamentações variam entre
+          países.
+        </p>
+        <p>
+          Imposto de renda é um tributo cobrado pelo governo sobre a renda de
+          pessoas físicas e jurídicas. Pessoas físicas pagam com base em seus
+          rendimentos anuais, enquanto empresas pagam sobre seus lucros. O
+          imposto é calculado com uma alíquota que varia de acordo com a faixa
+          de renda ou o tipo de empresa. A arrecadação é utilizada para
+          financiar gastos públicos. Regras e regulamentações variam entre
+          países.
+        </p>
+        <p>
+          Imposto de renda é um tributo cobrado pelo governo sobre a renda de
+          pessoas físicas e jurídicas. Pessoas físicas pagam com base em seus
+          rendimentos anuais, enquanto empresas pagam sobre seus lucros. O
+          imposto é calculado com uma alíquota que varia de acordo com a faixa
+          de renda ou o tipo de empresa. A arrecadação é utilizada para
+          financiar gastos públicos. Regras e regulamentações variam entre
+          países.
+        </p>
+        <p>
+          Imposto de renda é um tributo cobrado pelo governo sobre a renda de
+          pessoas físicas e jurídicas. Pessoas físicas pagam com base em seus
+          rendimentos anuais, enquanto empresas pagam sobre seus lucros. O
+          imposto é calculado com uma alíquota que varia de acordo com a faixa
+          de renda ou o tipo de empresa. A arrecadação é utilizada para
+          financiar gastos públicos. Regras e regulamentações variam entre
+          países.
+        </p>
+      </div>
+    </section>
+    <footer>
+      <span>
+        <a href="https://www.facebook.com/profile.php?id=100035259228757" id="facebook" target="_blank"><img
+            src="assets/icons/facebook.svg" alt="facebook" />
+        </a>
+        <a href="https://github.com/Henrytos" target="_blank" id="github"><img src="assets/icons/github.svg"
+            alt="github" />
+        </a>
+        <a href="https://www.instagram.com/dev_henry16/" target="_blank" id="instagram"><img
+            src="assets/icons/instagram.svg" alt="instagram" /></a>
+        <a href="https://www.linkedin.com/in/henry-franz-617841245/" id="linkedin" target="_blank"><img
+            src="assets/icons/linkedin.svg" alt="linkedin" />
+
+          <a href="" target="_blank" id="whatsapp"><img src="assets/icons/whatsapp.svg" alt="whatsapp" />
+
+      </span>
+    </footer>
+  </main>
+</body>
+
 </html>
