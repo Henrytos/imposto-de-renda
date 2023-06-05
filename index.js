@@ -18,10 +18,20 @@ function fotterNoHover() {
     icon.remove()
 }
 
+let main = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+let selectElement = ''
+let bandeira = ''
+console.log(main)
+if (main > 1000) {
+    selectElement = document.getElementById("idioma2")
 
-const selectElement = document.getElementById("idioma")
+    bandeira = document.getElementById('bandeiras2')
+} else {
+    selectElement = document.getElementById("idioma")
 
-const bandeira = document.getElementById('bandeiras')
+    bandeira = document.getElementById('bandeiras')
+}
+
 
 let click = 0
 selectElement.addEventListener("click", function () {
@@ -30,7 +40,9 @@ selectElement.addEventListener("click", function () {
     click++
     if (selectedOption.value !== '' && click % 2 == 0) {
         bandeira.src = `assets/imgs/bandeira/${selectedOption.value}.png`
-        console.log("Opção selecionada: " + selectedOption.text + " valor: " + selectedOption.value)
+        // console.log(bandeira)
+        // console.log(selectedOption.value)
+        // console.log("Opção selecionada: " + selectedOption.text + " valor: " + selectedOption.value)
         colorTextLeanguage(selectedOption)
         switchLenguage(selectedOption.value)
     }
