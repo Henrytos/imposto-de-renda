@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8" />
@@ -10,6 +10,9 @@
   <link rel="shortcut icon" href="assets/icons/leão.png" type="image/x-icon" />
   <script src="index.js" defer type="module"></script>
   <script src="mobile-navbar.js" defer type="module"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -21,28 +24,28 @@
           <img src="assets/imgs/logo-leão.png" alt="logo leão" />
           <span>Imposto de renda</span>
           <!-- menu responsivo -->
-           <nav>
-        <div class="mobile-menu">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
-        <ul class="nav-list">
-           <li>  <span class="languages">
-            <img src="assets/imgs/bandeira/Português.png" alt="bandeira do brazil" id="bandeiras"> 
-            <select name="idioma" id="idioma" class="languages-type">
-              <option value="Português" id="Português" class="language">Português</option>
-              <option value="Inglês" id="Inglês" class="language">Inglês(EUA)</option>
-              <option value="Espanhol" id="Espanhol" class="language">Espanhol</option>
-              <option value="Mandarin" id="Mandarin" class="language">Mandarin</option>
-            </select>
-          </span></li>
-          <li><a href="#" class="btn" >O QUE É?</a></li>
-          <li><a href="#"class="btn" >LOCAL</a></li>
-          <li><a href="#"class="btn" >CALCULADORA</a></li>
-          <li><a href="#"class="btn" >CONTATO</a></li>
-        </ul>
-      </nav>
+          <nav>
+            <div class="mobile-menu">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+              <li> <span class="languages">
+                  <img src="assets/imgs/bandeira/Português.png" alt="bandeira do brazil" id="bandeiras">
+                  <select name="idioma" id="idioma" class="languages-type">
+                    <option value="Português" id="Português" class="language">Português</option>
+                    <option value="Inglês" id="Inglês" class="language">Inglês(EUA)</option>
+                    <option value="Espanhol" id="Espanhol" class="language">Espanhol</option>
+                    <option value="Mandarin" id="Mandarin" class="language">Mandarin</option>
+                  </select>
+                </span></li>
+              <li><a href="#" class="btn">O QUE É?</a></li>
+              <li><a href="#" class="btn">LOCAL</a></li>
+              <li><a href="#" class="btn">CALCULADORA</a></li>
+              <li><a href="#" class="btn">CONTATO</a></li>
+            </ul>
+          </nav>
         </div>
         <nav>
           <a class="btn" id="focus">O QUE É?</a>
@@ -50,7 +53,7 @@
           <a class="btn">CALCULADORA</a>
           <a class="btn">CONTATO</a>
           <span class="languages">
-            <img src="assets/imgs/bandeira/Português.png" alt="bandeira do brazil" id="bandeiras2"> 
+            <img src="assets/imgs/bandeira/Português.png" alt="bandeira do brazil" id="bandeiras2">
             <select name="idioma" id="idioma2" class="languages-type">
               <option value="Português" id="Português" class="language">Português</option>
               <option value="Inglês" id="Inglês" class="language">Inglês(EUA)</option>
@@ -62,52 +65,171 @@
       </div>
     </header>
 
-    <!-- VIDEO -->
+    <!-- Conteudo-->
     <section>
-      <h3>Oque é imposto de Renda?</h3>
-      <iframe src="https://www.youtube-nocookie.com/embed/IN9fwPeBrHs" title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
-      <div>
-        <h3>Resumo:</h3>
+      <!-- O que é Imposto de Renda (IRPF)? -->
+      <section class="container-1">
+        <h2>O que é Imposto de Renda (IRPF)?</h2>
         <p>
-          Imposto de renda é um tributo cobrado pelo governo sobre a renda de
-          pessoas físicas e jurídicas. Pessoas físicas pagam com base em seus
-          rendimentos anuais, enquanto empresas pagam sobre seus lucros. O
-          imposto é calculado com uma alíquota que varia de acordo com a faixa
-          de renda ou o tipo de empresa. A arrecadação é utilizada para
-          financiar gastos públicos. Regras e regulamentações variam entre
-          países.
+          O Imposto de Renda Pessoa Física (IRPF) é um tributo cobrado pela Receita Federal sobre os rendimentos de uma
+          Pessoa Física e é proporcional ao volume desses rendimentos.
+        </p>
+        <!-- video  O que é Imposto de Renda (IRPF)?-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/KOxMQYnYfbg" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+        <p>
+          No que diz respeito ao salário do trabalhador, a alíquota de Imposto de Renda a ser paga depende da faixa
+          salarial e do número de dependentes.
         </p>
         <p>
-          Imposto de renda é um tributo cobrado pelo governo sobre a renda de
-          pessoas físicas e jurídicas. Pessoas físicas pagam com base em seus
-          rendimentos anuais, enquanto empresas pagam sobre seus lucros. O
-          imposto é calculado com uma alíquota que varia de acordo com a faixa
-          de renda ou o tipo de empresa. A arrecadação é utilizada para
-          financiar gastos públicos. Regras e regulamentações variam entre
-          países.
+
+          Nesse sentido, para calcular o valor a ser pago mensalmente de IRPF sobre o salário, é preciso levar em
+          consideração estes dois fatores.
         </p>
+      </section>
+
+      <!-- Tabela de Imposto de Renda -->
+      <section class="container-2">
+        <h2>Tabela de Imposto de Renda</h2>
+        <p>A seguir, você pode conferir a tabela de Imposto de Renda de acordo com cada faixa salarial:</p>
+
+        <!-- Tabela -->
+        <table>
+          <thead>
+            <tr>
+              <th>SALÁRIO BRUTO MENSAL </th>
+              <th>ALÍQUOTA </th>
+              <th>DEDUÇÃO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>de 0,00 até 1.903,98</td>
+              <td>Isento </td>
+              <td>0,00</td>
+            </tr>
+            <tr>
+              <td>de 1.903,99 até 2.826,65</td>
+              <td>7,50%</td>
+              <td>142,80</td>
+            </tr>
+            <tr>
+              <td>de 2.826,66 até 3.751,05</td>
+              <td>15,00%</td>
+              <td>354,80</td>
+            </tr>
+            <tr>
+              <td>de 3.751,06 até 4.664,68</td>
+              <td>22,50%</td>
+              <td>636,13</td>
+            </tr>
+            <tr>
+              <td>a partir de 4.664,68</td>
+              <td>27,50%</td>
+              <td>869,36</td>
+            </tr>
+          </tbody>
+        </table>
+        <figcaption>Tabela de Imposto de Renda</figcaption>
         <p>
-          Imposto de renda é um tributo cobrado pelo governo sobre a renda de
-          pessoas físicas e jurídicas. Pessoas físicas pagam com base em seus
-          rendimentos anuais, enquanto empresas pagam sobre seus lucros. O
-          imposto é calculado com uma alíquota que varia de acordo com a faixa
-          de renda ou o tipo de empresa. A arrecadação é utilizada para
-          financiar gastos públicos. Regras e regulamentações variam entre
-          países.
+          A coluna Dedução diz sobre o valor máximo a ser deduzido do Imposto de Renda na Declaração Anual caso você
+          tenha
+          gastado
+          com despesas dedutíveis.
         </p>
+
         <p>
-          Imposto de renda é um tributo cobrado pelo governo sobre a renda de
-          pessoas físicas e jurídicas. Pessoas físicas pagam com base em seus
-          rendimentos anuais, enquanto empresas pagam sobre seus lucros. O
-          imposto é calculado com uma alíquota que varia de acordo com a faixa
-          de renda ou o tipo de empresa. A arrecadação é utilizada para
-          financiar gastos públicos. Regras e regulamentações variam entre
-          países.
+          Portanto, como o governo se propõe a oferecer saúde, educação etc. para a população, todo gasto que você tem
+          com
+          essas áreas pode ser abatido do valor que você paga de imposto.
         </p>
-      </div>
+
+        <p>
+          De todo modo, a alíquota a ser paga de Imposto de Renda já é descontada na sua folha de pagamento, e o valor
+          que
+          você recebe já é líquido de tributos.
+        </p>
+      </section>
+      <!-- Como funciona o cálculo do Imposto de Renda -->
+      <section class="container-3">
+        <h2>Como funciona o cálculo do Imposto de Renda</h2>
+        <p>Para se chegar à base de cálculo do Imposto de Renda, é preciso fazer algumas deduções no salário bruto, que
+          são:</p>
+        <ul>
+          <li>Contribuição para o INSS;</li>
+          <li>Número de dependentes legais (R$ 189,59 por cada um);</li>
+          <li>Pensão alimentícia (no caso de quem paga).</li>
+        </ul>
+        <p>Assim, chegaremos ao valor sobre o qual a alíquota de IRPF vai incidir. Após todos esses descontos, teremos o
+          salário
+          líquido.</p>
+        <p>É importante lembrar que esse imposto incide sempre que a pessoa recebe uma renda, não necessariamente um
+          salário. Desse
+          modo, o IR incide sobre:</p>
+        <ul>
+          <li>Salário acima do limite estabelecido;</li>
+          <li>Férias e 13º;</li>
+          <li>Benefícios, como participação no lucro, bonificação, aposentadoria, seguro-desemprego etc.</li>
+        </ul>
+      </section>
+      <!-- Dúvidas frequentes sobre o assunto    --><!---efeito especial de none e block-->
+      <section class="container-4">
+        <h2>Dúvidas frequentes sobre o assunto</h2>
+        <!-- Quem tem que pagar Imposto de Renda? -->
+        <article class="doubts-1" id="doubts-1">
+          <h3>Quem tem que pagar Imposto de Renda?<i class="fa-solid fa-chevron-down"></i></h3>
+          <div>
+            <p>Paga Imposto de Renda quem tem salário acima de R$ 1.903,98 por mês ou quem teve lucro com seus
+              investimentos que não são isentos.</p>
+          </div>
+
+        </article>
+        <!-- Como calcular Imposto de Renda 2023? -->
+        <article class="doubts-2" id="doubts-2">
+          <h3>Como calcular Imposto de Renda 2023?<i class="fa-solid fa-chevron-down"></i></h3>
+          <div>
+            <p>Para calcular o Imposto de Renda 2023, utilize a Calculadora de Imposto de Renda da Mobills.</p>
+            <p>Nela, você vai informar seu salário bruto e o número de dependentes legais que você tem. Assim, você
+              saberá
+              o valor a ser pago em Imposto de Renda.</p>
+          </div>
+        </article>
+        <!-- Quais as datas da restituição do Imposto de Renda 2023? -->
+        <article class="doubts-3" id="doubts-3">
+          <h3>Quais as datas da restituição do Imposto de Renda 2023?<i class="fa-solid fa-chevron-down"></i></h3>
+          <div>
+            <ul>
+              <li>1º lote: 31 de maio</li>
+              <li>2º lote: 30 de junho</li>
+              <li>3º lote: 30 de julho</li>
+              <li>4º lote: 31 de agosto</li>
+              <li>5º lote: 30 de setembro</li>
+              <li>1º lote residual: 29 de outubro</li>
+              <li>2º lote residual: 30 de novembro</li>
+              <li>3º lote residual: 30 de dezembro.</li>
+            </ul>
+          </div>
+        </article>
+        <!-- O que acontece com quem não declarar o Imposto de Renda? -->
+        <article class="doubts-4" id="doubts-4">
+          <h3>O que acontece com quem não declarar o Imposto de Renda?<i class="fa-solid fa-chevron-down"></i></h3>
+          <div>
+            <p>
+              Quem entregar, com atraso, a declaração está sujeito a multa.
+            </p>
+            <p>
+              Segundo a Receita Federal, a multa é de 1% ao mês, sobre o tributo devido, limitado a 20% do valor devido
+              a
+              ser pago.
+              Ademais, o valor mínimo da multa é de R$ 165,74.
+            </p>
+          </div>
+      </section>
+
     </section>
+    <!-- Rodapé -->
     <footer>
       <span>
         <a href="https://www.facebook.com/profile.php?id=100035259228757" id="facebook" target="_blank"><img

@@ -154,13 +154,30 @@ header > div > nav {
   top: 0;
   left: 0;
   z-index: 2;
+} /* haburguinho */
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.nav-list.active {
+  z-index: 1;
+  transform: translateX(0);
 }
 
 /*-----------------Corpo------------------------*/
 main > section {
   margin: auto;
   padding: 30px;
-  width: 700px;
+
+  width: 50vw;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -181,6 +198,76 @@ h3 {
   text-indent: 20px;
   color: var(--color-quartyary);
   text-align: justify;
+}
+main > section > section > p,
+main > section > section > h2,
+main > section > section > ul {
+  color: var(--color-quartyary);
+  padding: 15px;
+}
+
+/* Tabela */
+table {
+  border-collapse: collapse;
+  color: black;
+  width: 100%;
+}
+
+table > thead > tr > th {
+  text-align: left;
+  background-color: #77e87590;
+  padding: 15px;
+}
+table > tbody > tr > td {
+  padding: 15px;
+}
+table > tbody > tr:nth-child(odd) {
+  background-color: #5cc26aa2;
+}
+table > tbody > tr:nth-child(even) {
+  background-color: #77e875b1;
+}
+figcaption {
+  color: #ffffffab;
+  text-align: center;
+}
+/* Duvidas */
+main > section > section > article {
+  background-color: #5cc26aa2;
+  border-radius: 10px;
+  padding: 20px;
+}
+.container-4 {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main > section > section > article > h3 {
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+main > section > section > article > div {
+  display: none;
+  transition: 0.5s ease-in-out;
+}
+
+main > section > section > article > h3 {
+  color: black;
+  cursor: pointer;
+}
+main > section > section > article > h3 > i {
+  transform: rotate(-90deg);
+  transform: translateY(3px);
+}
+ul {
+  transform: translateX(20px);
+}
+ul > li {
+  padding: 5px;
+}
+main > section > section > article > div > ul {
+  transform: translateX(60px);
 }
 /*------------------Rodapé--------------------*/
 footer {
@@ -262,8 +349,22 @@ footer > span > a:nth-child(5):hover {
   margin: 8px;
   transition: 0.3s;
 }
-
-@media (max-width: 999px) {
+/*---------------------------RESPONSIVIDADE--------------------*/
+/* Laptop */
+@media (max-width: 1988px) {
+  main > section {
+    width: 60vw;
+  }
+}
+@media (max-width: 1500px) {
+  main > section {
+    width: 70vw;
+  }
+}
+@media (max-width: 1024px) {
+  main > section {
+    width: 90vw !important;
+  }
   body {
     overflow-x: hidden;
   }
@@ -302,7 +403,15 @@ footer > span > a:nth-child(5):hover {
     width: 90%;
   }
 }
-@media (max-width: 500px) {
+
+/*Tablet*/
+@media (max-width: 768px) {
+}
+/* mobile L */
+@media (max-width: 425px) {
+  main > section {
+    width: 100vw !important;
+  }
   .nav-list {
     width: 80vw;
   }
@@ -337,13 +446,14 @@ footer > span > a:nth-child(5):hover {
     height: 30px;
   }
 }
-
-.nav-list.active {
-  z-index: 1;
-  transform: translateX(0);
+/* mobile M */
+@media (max-width: 375px) {
+}
+/* mobile S */
+@media (max-width: 320px) {
 }
 
-/* animção */
+/* animções */
 @keyframes navLinkFade {
   from {
     opacity: 0;
@@ -353,16 +463,4 @@ footer > span > a:nth-child(5):hover {
     opacity: 1;
     transform: translateX(0);
   }
-}
-/* haburguinho */
-.mobile-menu.active .line1 {
-  transform: rotate(-45deg) translate(-8px, 8px);
-}
-
-.mobile-menu.active .line2 {
-  opacity: 0;
-}
-
-.mobile-menu.active .line3 {
-  transform: rotate(45deg) translate(-5px, -7px);
 }
