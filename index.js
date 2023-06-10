@@ -85,16 +85,12 @@ titleDoubts.forEach(title => title.addEventListener('click', viewDoubts))
 function viewDoubts() {
 
     let selectedDoubt = document.querySelector(`#${this.id}>div`)
-    console.log(selectedDoubt)
-    console.log(this)
-    titleDoubts.forEach(ele => {
-        ele == this ?
-            selectedDoubt.style.display = 'inline' :
-            titleDoubts.forEach(dif => dif !== this ? dif.style.display = 'inline' : undefined)
-    })
-    // titleDoubts.forEach(ele => {
-    //     ele != this && selectedDoubt.style.display == 'none' ? selectedDoubt.style.display = 'inline' :
+    if (selectedDoubt.style.display == 'inline') {
+        selectedDoubt.style.display = 'none'
+    }
+    else {
+        selectedDoubt.style.display = 'inline'
 
-    //         selectedDoubt.style.display = 'none'
-    // })
+    }
+
 }

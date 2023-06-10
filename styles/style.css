@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kufam:ital@1&family=Poppins:ital@0;1&display=swap");
 :root {
-  --color-primary: #33e29a;
+  --color-secundary: #f5f5f5;
   --color-terceary: #4caf50;
-  --color-sencudary: #525252;
+  --color-primary: #f5f5f5;
   --color-quartyary: #f5f5f5;
   --font-text: "Poppins", sans-serif;
   --font-title: "Kufam", sans-serif;
@@ -189,10 +189,7 @@ main > section {
   border-radius: 12px;
   gap: 20px;
 }
-main > section > iframe {
-  width: 90%;
-  height: 300px;
-}
+
 main > section > div > p,
 h3 {
   text-indent: 20px;
@@ -205,12 +202,20 @@ main > section > section > ul {
   color: var(--color-quartyary);
   padding: 15px;
 }
+/* Video */
+#video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Tabela */
 table {
   border-collapse: collapse;
   color: black;
   width: 100%;
+  max-width: 1000px;
+  margin: auto;
 }
 
 table > thead > tr > th {
@@ -325,6 +330,23 @@ footer > span > a:nth-child(4):hover {
 footer > span > a:nth-child(5):hover {
   background-color: #2bb741;
 }
+/* switch-theme */
+.switch-theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 2px solid #fff;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  transition: 0.15s;
+  color: var(--color-quartyary);
+}
+
+.switch-theme:hover {
+  background-color: #fff;
+  color: #000;
+}
 /*-------- Estilização mobile----------- */
 
 .nav-list {
@@ -406,9 +428,17 @@ footer > span > a:nth-child(5):hover {
 
 /*Tablet*/
 @media (max-width: 768px) {
+  #video > iframe {
+    width: 100%;
+    height: 250px;
+  }
 }
 /* mobile L */
 @media (max-width: 425px) {
+  #video > iframe {
+    width: 100%;
+    height: 230px;
+  }
   main > section {
     width: 100vw !important;
   }
@@ -448,9 +478,17 @@ footer > span > a:nth-child(5):hover {
 }
 /* mobile M */
 @media (max-width: 375px) {
+  #video > iframe {
+    width: 100%;
+    height: 180px;
+  }
 }
 /* mobile S */
 @media (max-width: 320px) {
+  #video > iframe {
+    width: 100%;
+    height: 145px;
+  }
 }
 
 /* animções */
