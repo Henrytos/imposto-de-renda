@@ -22,7 +22,7 @@ let main = window.innerWidth || document.documentElement.clientWidth || document
 let selectElement = ''
 let bandeira = ''
 console.log(main)
-if (main > 1000) {
+if (main > 1300) {
     selectElement = document.getElementById("idioma2")
 
     bandeira = document.getElementById('bandeiras2')

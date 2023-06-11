@@ -45,19 +45,19 @@
               <li>
                 <sapn class="switch-theme">Dark/Light</sapn>
               </li>
-              <li><a href="#" class="btn">O QUE É?</a></li>
-              <li><a href="#" class="btn">LOCAL</a></li>
-              <li><a href="#" class="btn">CALCULADORA</a></li>
-              <li><a href="#" class="btn">CONTATO</a></li>
+              <li><a href="#tabela" class="btn">TABELA</a></li>
+              <li><a href="#local" class="btn">LOCAL</a></li>
+              <li><a href="#calculadora" class="btn">CALCULADORA</a></li>
+              <li><a href="#duvidas" class="btn">DÚVIDAS</a></li>
 
             </ul>
           </nav>
         </div>
         <nav>
-          <a class="btn" id="focus">O QUE É?</a>
-          <a class="btn">LOCAL</a>
-          <a class="btn">CALCULADORA</a>
-          <a class="btn">CONTATO</a>
+          <a href="#tabela" class="btn" id="focus">TABELA</a>
+          <a href="#local" class="btn">LOCAL</a>
+          <a href="#calculadora" class="btn">CALCULADORA</a>
+          <a href="#duvidas" class="btn">DÚVIDAS</a>
 
           <span class="languages">
             <img src="assets/imgs/bandeira/Português.png" alt="bandeira do brazil" id="bandeiras2">
@@ -108,7 +108,7 @@
         <p>A seguir, você pode conferir a tabela de Imposto de Renda de acordo com cada faixa salarial:</p>
 
         <!-- Tabela -->
-        <table>
+        <table id="tabela">
           <thead>
             <tr>
               <th>SALÁRIO BRUTO MENSAL </th>
@@ -164,6 +164,19 @@
           você recebe já é líquido de tributos.
         </p>
       </section>
+      <!-- LOCAL -->
+      <section class="container-2-5">
+        <h2 id="local">Local</h2>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!4v1686483362069!6m8!1m7!1sigSQmrZC0m2l_WiYKUKbCA!2m2!1d-23.58596027585069!2d-46.68136924000998!3f90.60531!4f0!5f0.7820865974627469"
+          width="560" height="315" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58504.1824482981!2d-46.71035030169074!3d-23.585985400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce574310df49f3%3A0xc56ec3dde72b0327!2sICBC%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1686483385854!5m2!1spt-BR!2sbr"
+          width="560" height="315" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </section>
       <!-- Como funciona o cálculo do Imposto de Renda -->
       <section class="container-3">
         <h2>Como funciona o cálculo do Imposto de Renda</h2>
@@ -187,7 +200,7 @@
         </ul>
       </section>
       <!-- Dúvidas frequentes sobre o assunto    --><!---efeito especial de none e block-->
-      <section class="container-4">
+      <section class="container-4" id="duvidas">
         <h2>Dúvidas frequentes sobre o assunto</h2>
         <!-- Quem tem que pagar Imposto de Renda? -->
         <article class="doubts-1" id="doubts-1">
