@@ -94,3 +94,28 @@ function viewDoubts() {
     }
 
 }
+
+const switchTheme = document.querySelectorAll('.switch-theme')
+switchTheme.forEach(buttonTheme => buttonTheme.addEventListener('click', switchThemeDarkLigth))
+let i = 0
+function switchThemeDarkLigth() {
+    if (i % 2 == 0) {
+        document.documentElement.style.setProperty('--color-litgh', '#000')
+        document.documentElement.style.setProperty('--color-dark', '#f5f5f5')
+        document.documentElement.style.setProperty('--glasmorfismo-links', 'rgba(0, 0, 0, 0.16)')
+        document.documentElement.style.setProperty('--bg-color', 'rgba(265, 265, 265, 0.36)')
+        document.querySelector('header>div>div>img').src = 'assets/imgs/logo-leão-ligth.png'
+
+    }
+    else {
+        document.documentElement.style.setProperty('--color-litgh', '#f5f5f5')
+        document.documentElement.style.setProperty('--color-dark', '#000')
+        document.documentElement.style.setProperty('--glasmorfismo-links', 'rgba(255, 255, 255, 0.16)')
+        document.documentElement.style.setProperty('--bg-color', 'rgba(38, 38, 38, 0.46)')
+        document.querySelector('header>div>div>img').src = 'assets/imgs/logo-leão-dark.png'
+
+    }
+
+    i++
+
+}
