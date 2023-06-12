@@ -66,7 +66,7 @@ function colorTextLeanguage(selectedOption) {
 
             break;
 
-        case "Mandarin":
+        case "mandarin":
             selectElement.style.color = "#FF3D00";
 
             break;
