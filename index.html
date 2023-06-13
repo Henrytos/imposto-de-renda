@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Imposto de renda</title>
   <link rel="stylesheet" href="styles/style.css" />
-  <link rel="shortcut icon" href="assets/icons/leão.png" type="image/x-icon" />
+  <link rel="shortcut icon" href="./assets/icons/leão.png" type="image/x-icon" />
   <script src="index.js" defer type="module"></script>
   <script src="mobile-navbar.js" defer type="module"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -21,7 +21,7 @@
     <header>
       <div>
         <div>
-          <img src="assets/imgs/logo-leão-dark.png" alt="logo leão" />
+          <img src="./assets/imgs/logo-leão-dark.png" alt="logo leão" />
           <span>Imposto de renda</span>
           <!-- menu responsivo -->
           <nav>
@@ -32,7 +32,7 @@
             </div>
             <ul class="nav-list">
               <li> <span class="languages">
-                  <img src="assets/imgs/bandeira/Português.png" alt="bandeira do brazil" id="bandeiras">
+                  <img src="./assets/imgs/bandeira/Português.png" alt="bandeira do brazil" id="bandeiras">
                   <select name="idioma" id="idioma" class="languages-type">
                     <option value="Português" id="Português" class="language">Português</option>
                     <option value="Inglês" id="Inglês" class="language">Inglês(EUA)</option>
@@ -41,6 +41,8 @@
                   </select>
                   <i class="fa-solid fa-chevron-down" id="seta"></i>
 
+              </li>
+              <li><span class="font-size"><input type="range" id="vol" name="vol" min="8" max="24" value="16"></span>
               </li>
               <li>
                 <sapn class="switch-theme">Dark/Light</sapn>
@@ -58,9 +60,9 @@
           <a href="#local" class="btn">LOCAL</a>
           <a href="#duvidas" class="btn">DÚVIDAS</a>
           <a href="#calculadora" class="btn">CALCULADORA</a>
-          <span class="font-size"><input type="range" id="vol" name="vol" min="1" max="50" value="25"></span>
+          <span class="font-size"><input type="range" id="vol" name="vol" min="1" max="32" value="16"></span>
           <span class="languages">
-            <img src="assets/imgs/bandeira/Português.png" alt="bandeira do brazil" id="bandeiras2">
+            <img src="./assets/imgs/bandeira/Português.png" alt="bandeira do brazil" id="bandeiras2">
             <select name="idioma" id="idioma2" class="languages-type">
               <option value="Português" id="Português" class="language">Português</option>
               <option value="Inglês" id="Inglês" class="language">Inglês(EUA)</option>
@@ -287,17 +289,17 @@
     <footer>
       <span>
         <a href="https://www.facebook.com/profile.php?id=100035259228757" id="facebook" target="_blank"><img
-            src="assets/icons/facebook.svg" alt="facebook" />
+            src="./assets/icons/facebook.svg" alt="facebook" />
         </a>
-        <a href="https://github.com/Henrytos" target="_blank" id="github"><img src="assets/icons/github.svg"
+        <a href="https://github.com/Henrytos" target="_blank" id="github"><img src="./assets/icons/github.svg"
             alt="github" />
         </a>
         <a href="https://www.instagram.com/dev_henry16/" target="_blank" id="instagram"><img
-            src="assets/icons/instagram.svg" alt="instagram" /></a>
+            src="./assets/icons/instagram.svg" alt="instagram" /></a>
         <a href="https://www.linkedin.com/in/henry-franz-617841245/" id="linkedin" target="_blank"><img
-            src="assets/icons/linkedin.svg" alt="linkedin" />
+            src="./assets/icons/linkedin.svg" alt="linkedin" />
 
-          <a href="" target="_blank" id="whatsapp"><img src="assets/icons/whatsapp.svg" alt="whatsapp" />
+          <a href="" target="_blank" id="whatsapp"><img src="./assets/icons/whatsapp.svg" alt="whatsapp" />
 
       </span>
     </footer>

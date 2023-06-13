@@ -11,6 +11,7 @@
   --font-size-text: 16px;
   --font-size-title: 32px;
   --font-size-sub-title: 24px;
+  --font-size-title-doutbs: 18px;
   --blur-low: 2.5px;
   --blur-hard: 10px;
 }
@@ -178,21 +179,8 @@ nav > .languages {
 .idioma:hover {
   cursor: pointer;
 }
-/* nav bar mobile */
-.nav-mobile {
-  background-color: var(--color-dark);
-  backdrop-filter: blur(var(--blur-hard));
-  background-position: center;
-  display: none;
-  font-size: var(--font-size-text);
-  color: var(--color-litgh);
-  width: 98vw;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-} /* haburguinho */
+
+/* haburguinho */
 .mobile-menu.active .line1 {
   transform: rotate(-45deg) translate(-8px, 8px);
 }
@@ -318,6 +306,7 @@ main > section > section > article > h4 {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+  font-size: var(--font-size-title-doutbs);
 }
 main > section > section > article > div {
   display: none;
@@ -477,6 +466,7 @@ footer > span > a:nth-child(5):hover {
     transition: transform 0.3s ease-in;
     position: fixed;
   }
+
   .nav-list li {
     margin-left: 0;
     opacity: 0;
@@ -494,6 +484,16 @@ footer > span > a:nth-child(5):hover {
     top: 45px;
     z-index: 2;
     position: fixed;
+  }
+  .nav-list.active::before {
+    content: " ";
+    background: var(--glasmorfismo-links);
+    backdrop-filter: blur(var(--blur-low));
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -100%;
   }
   header > div > nav {
     display: none;
@@ -537,6 +537,16 @@ footer > span > a:nth-child(5):hover {
   }
   .nav-list {
     width: 80vw;
+  }
+  .nav-list.active::before {
+    content: " ";
+    background: var(--glasmorfismo-links);
+    backdrop-filter: blur(var(--blur-hard));
+    width: 20vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -25%;
   }
   header > div > div {
     flex-direction: column;
