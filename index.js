@@ -33,19 +33,17 @@ if (main > 1300) {
 }
 
 
-let click = 0
 selectElement.addEventListener("click", function () {
     let selectedOption = selectElement.options[selectElement.selectedIndex];
 
-    click++
-    if (selectedOption.value !== '' && click % 2 == 0) {
-        bandeira.src = `./assets/imgs/bandeira/${selectedOption.value}.png`
-        // console.log(bandeira)
-        // console.log(selectedOption.value)
-        // console.log("Opção selecionada: " + selectedOption.text + " valor: " + selectedOption.value)
-        colorTextLeanguage(selectedOption)
-        switchLenguage(selectedOption.value)
-    }
+
+    bandeira.src = `./assets/imgs/bandeira/${selectedOption.value}.png`
+    // console.log(bandeira)
+    // console.log(selectedOption.value)
+    // console.log("Opção selecionada: " + selectedOption.text + " valor: " + selectedOption.value)
+    colorTextLeanguage(selectedOption)
+    switchLenguage(selectedOption.value)
+
 })
 
 function colorTextLeanguage(selectedOption) {
@@ -109,21 +107,24 @@ const td = document.querySelectorAll('td')
 
 
 const Português = {
-    title: ['Imposto de Renda'],
-    subTitles: ['O que é Imposto de Renda (IRPF)?', 'Tabela do Imposto de Renda', 'Localização', 'Como funciona o cálculo do Imposto de Renda', 'Dúvidas Frequentes sobre o assunto'],
-    texts: ["Imposto de Renda da Pessoa Física (IRPF) é um imposto cobrado pelo Órgão Fiscal sobre a renda da Pessoa Física e é proporcional ao volume dessa renda.", "Em relação ao salário do trabalhador, a alíquota do Imposto de Renda a ser pago depende da faixa salarial e do número de dependentes.", "Nesse sentido, para calcular o valor do imposto de renda mensal a ser pago sobre o salário, é preciso levar em consideração esses dois fatores.", "Abaixo, pode consultar a tabela do Imposto sobre o Rendimento de acordo com cada escalão salarial:", "A coluna Dedução indica o valor máximo que pode ser deduzido do Imposto sobre o Rendimento na Declaração Anual no caso de terem ocorrido despesas dedutíveis.", "Portanto, uma vez que o governo tem o compromisso de oferecer saúde, educação etc. receber já está líquido de impostos.", "Bem-vindo à nossa empresa de declaração de imposto de renda! Estamos felizes em ajudá-lo a navegar no complexo mundo dos impostos e garantir que você cumpra suas obrigações fiscais com eficiência e precisão.", "Nossa empresa tem anos de experiência no setor e nossa equipe de especialistas em contabilidade está pronta para ajudá-lo em todas as etapas do processo de declaração do imposto de renda. Sabemos que cada situação é única, por isso nos dedicamos a fornecer um atendimento personalizado que atenda às suas necessidades específicas.", "Aqui em nossa empresa de imposto de renda, sabemos que o cumprimento das obrigações fiscais é fundamental. Nossa seção de localização foi criada para ajudá-lo a tomar decisões informadas e garantir o cumprimento das leis tributárias aplicáveis. Conte com nossos serviços para simplificar o processo de declaração de imposto de renda e minimizar o estresse relacionado a impostos.", "Entre em contato conosco hoje para saber mais sobre nossos serviços ou para marcar uma consulta com um de nossos especialistas em contabilidade. Estamos ansiosos para ajudá-lo a atingir seus objetivos financeiros e garantir sua tranquilidade fiscal.", "Para chegar à base de cálculo do Imposto de Renda, é necessário fazer algumas deduções do salário bruto, que são:", "Desta forma , obteremos o valor sobre o qual incidirá a alíquota do IRPF. Depois de todas essas deduções, teremos o salário líquido.", "É importante lembrar que esse imposto incide sempre que a pessoa recebe uma renda, não necessariamente um salário. Portanto, o IR incide sobre:", "Aquele que possui salário superior a R$ 1.903,98 mensais ou que obteve lucros com seus investimentos não isentos deve pagar Imposto de Renda.", "Para calcular o Imposto de Renda 2023, use a Calculadora de Imposto de Renda Mobills.", "Nela, você deve informar o seu salário bruto e o número de dependentes legais que possui. Assim você saberá o valor a pagar de Imposto de Renda.", "Quem entregar a declaração com atraso está sujeito a multa.", "De acordo com a Receita Federal, a multa é de 1% ao mês sobre o imposto devido, com um limite de 20% do valor devido a pagar. Além disso, o valor mínimo da multa é de R$ 165,74."
+    title: ['Imposto de renda'],
+    subTitles: ['O que é Imposto de Renda (IRPF)?', 'Tabela de Imposto de Renda', 'Local', 'Como funciona o cálculo do Imposto de Renda', 'Dúvidas frequentes sobre o assunto'],
+    texts: ["O Imposto de Renda Pessoa Física (IRPF) é um tributo cobrado pela Receita Federal sobre os rendimentos de uma Pessoa Física e é proporcional ao volume desses rendimentos.", "No que diz respeito ao salário do trabalhador, a alíquota de Imposto de Renda a ser paga depende da faixa salarial e do número de dependentes.", "Nesse sentido, para calcular o valor a ser pago mensalmente de IRPF sobre o salário, é preciso levar em consideração estes dois fatores.", "A seguir, você pode conferir a tabela de Imposto de Renda de acordo com cada faixa salarial:", "A coluna Dedução diz sobre o valor máximo a ser deduzido do Imposto de Renda na Declaração Anual caso você tenha gastado com despesas dedutíveis.", "Portanto, como o governo se propõe a oferecer saúde, educação etc. para a população, todo gasto que você tem com essas áreas pode ser abatido do valor que você paga de imposto.", "De todo modo, a alíquota a ser paga de Imposto de Renda já é descontada na sua folha de pagamento, e o valor que você recebe já é líquido de tributos.", "Bem-vindo à nossa empresa de declaração de imposto de renda! Estamos felizes em ajudar você a navegar pelo complexo mundo dos impostos e garantir que você cumpra suas obrigações fiscais de maneira eficiente e precisa.", "Nossa empresa tem anos de experiência no setor e nossa equipe de especialistas em contabilidade está pronta para auxiliá-lo em todas as etapas do processo de declaração de imposto de renda. Sabemos que cada situação é única, e é por isso que nos dedicamos a fornecer um serviço personalizado para atender às suas necessidades específicas.", "Aqui na nossa empresa de declaração de imposto de renda, sabemos que a conformidade fiscal é fundamental. Nossa seção de local foi criada para ajudá-lo a tomar decisões informadas e garantir que você esteja em conformidade com as leis fiscais aplicáveis. Confie em nossos serviços para simplificar o processo de declaração de imposto de renda e minimizar o estresse relacionado aos impostos.", "Entre em contato conosco hoje mesmo para obter mais informações sobre nossos serviços ou para agendar uma consulta com um de nossos especialistas em contabilidade. Estamos ansiosos para ajudá-lo a atingir seus objetivos financeiros e garantir sua tranquilidade fiscal.", "Para se chegar à base de cálculo do Imposto de Renda, é preciso fazer algumas deduções no salário bruto, que são:", "Assim, chegaremos ao valor sobre o qual a alíquota de IRPF vai incidir. Após todos esses descontos, teremos o salário líquido.", "É importante lembrar que esse imposto incide sempre que a pessoa recebe uma renda, não necessariamente um salário. Desse modo, o IR incide sobre:", "Paga Imposto de Renda quem tem salário acima de R$ 1.903,98 por mês ou quem teve lucro com seus investimentos que não são isentos.", "Para calcular o Imposto de Renda 2023, utilize a Calculadora de Imposto de Renda da Mobills.", "Nela, você vai informar seu salário bruto e o número de dependentes legais que você tem. Assim, você saberá o valor a ser pago em Imposto de Renda.", "Quem entregar, com atraso, a declaração está sujeito a multa.", "Segundo a Receita Federal, a multa é de 1% ao mês, sobre o tributo devido, limitado a 20% do valor devido a ser pago. Ademais, o valor mínimo da multa é de R$ 165,74."
     ],
-    links: ['TABELA', 'LOCALIZAÇÃO', 'PERGUNTAS', 'CALCULADORA'],
-    list: ['Contribuição para o INSS;',
-        'Número de dependentes legais (R$ 189,59 para cada um);',
+    links: ['TABELA', 'LOCAL', 'DÚVIDAS', 'CALCULADORA'],
+    list: [
+        'Contribuição para o INSS;',
+        'Número de dependentes legais (R$ 189,59 por cada um);',
         'Pensão alimentícia (no caso de quem paga).',
         'Salário acima do limite estabelecido;',
-        'Férias & 13;',
-        'Benefícios como participação nos lucros, bônus, aposentadoria, seguro-desemprego, etc.'
-    ], doubts: ['Quem tem que pagar Imposto de Renda?',
-        'Como calcular o Imposto de Renda 2023?',
-        'Quais são as datas de declaração do Imposto de Renda 2023?',
-        'O que acontece com quem não declara Imposto de Renda?'],
+        'Férias e 13º;',
+        'Benefícios, como participação no lucro, bonificação, aposentadoria, seguro- desemprego etc.',
+    ], doubts: [
+        'Quem tem que pagar Imposto de Renda?',
+        'Como calcular Imposto de Renda 2023?',
+        'Quais as datas da restituição do Imposto de Renda 2023?',
+        'O que acontece com quem não declarar o Imposto de Renda?'
+    ],
     listDoubts: [
         '1º lote: 31 de maio',
         '2º lote: 30 de junho',
@@ -135,13 +136,17 @@ const Português = {
         '3º lote residual: 30 de dezembro.'
     ],
     th: [
-        'SALÁRIO MENSAL BRUTO', 'TAXA', 'DEDUÇÃO'
+
+        'SALÁRIO BRUTO MENSAL', 'ALÍQUOTA', 'DEDUÇÃO'
     ],
-    td: ['0,00 a 1.903,98', 'Isento', '0,00',
-        'de 1.903,99 a 2.826,65', '7, 50%', '142, 80',
-        'de 2.826,66 a 3.751,05', '15,00 %', '354, 80',
-        'de 3.751,06 a 4.664,68', '22, 50 %', '636, 13',
-        'de 4.664,68', '27,50%', '869,36']
+    td: [
+        'de 0,00 até 1.903,98', 'Isento', '0,00',
+        'de 1.903,99 até 2.826,65', '7,50 %', '142,80',
+        'de 2.826,66 até 3.751,05', '15,00 % ', '354,80',
+        'de 3.751,06 até 4.664,68', '22,50 %', '636,13',
+        'a partir de 4.664,68', '27,50 %', '869,36'
+    ],
+    figcaption: ['Video de Imposto de Renda', 'Tabela de Imposto de Renda', 'Localização do Banco', 'Localização do Banco']
 
 
 }
@@ -178,7 +183,8 @@ const Espanhol = {
         'de 1.903,99 hasta 2.826,65', '7, 50 %', ' 142, 80',
         'de 2.826,66 hasta 3.751,05', '15,00 %', '354, 80',
         'de 3.751,06 hasta 4.664,68', '22, 50 % ', '636, 13',
-        'a partir de 4.664,68', '27, 50 %', '869, 36']
+        'a partir de 4.664,68', '27, 50 %', '869, 36'],
+    figcaption: ['Video de impuestos sobre la renta', 'Tabla de impuestos sobre la renta', 'Ubicación del banco', 'Ubicación del banco']
 }
 const Inglês = {
     title: ['Income Tax'],
@@ -216,7 +222,8 @@ const Inglês = {
         'from 2,826.66 to 3,751.05', '15.00%', '354.80',
         'from 3,751.06 to 4,664.68', '22.50%', '636.13',
         'above 4,664.68', '27.50%', '869.36'
-    ]
+    ],
+    figcaption: ['Income Tax Video', 'Income Tax Table', 'Bank Location', 'Bank Location']
 }
 const mandarin = {
     title: ['仁达的冒名顶替'],
@@ -275,7 +282,8 @@ const mandarin = {
         '从 2,826.66 到 3,751.05', '15.00%', '354.80',
         '从 3,751.06 到 4,664.68', '22.50%', '636.13',
         '高于 4, 664.68', '27.50 %', '869.36'
-    ]
+    ],
+    figcaption: ['所得税视频', '所得税表', '银行位置', '银行位置']
 }
 
 function switchLenguage(idioma) {
@@ -296,6 +304,7 @@ function switchLenguage(idioma) {
             th.forEach((thTable, i) => thTable.innerText = Português.th[i])
             td.forEach((tdTable, i) => tdTable.innerText = Português.td[i])
             doubtsTitles.forEach((t, i) => { t.innerHTML = Português.doubts[i] + icon })
+            figcaption.forEach((ele, i) => ele.innerText = Português.figcaption[i])
             break;
 
         case "Inglês":
@@ -309,6 +318,7 @@ function switchLenguage(idioma) {
             th.forEach((thTable, i) => thTable.innerText = Inglês.th[i])
             td.forEach((tdTable, i) => tdTable.innerText = Inglês.td[i])
             doubtsTitles.forEach((t, i) => { t.innerHTML = Inglês.doubts[i] + icon })
+            figcaption.forEach((ele, i) => ele.innerText = Inglês.figcaption[i])
             break;
 
         case "Espanhol":
@@ -322,6 +332,7 @@ function switchLenguage(idioma) {
             th.forEach((thTable, i) => thTable.innerText = Espanhol.th[i])
             td.forEach((tdTable, i) => tdTable.innerText = Espanhol.td[i])
             doubtsTitles.forEach((t, i) => { t.innerHTML = Espanhol.doubts[i] + icon })
+            figcaption.forEach((ele, i) => ele.innerText = Espanhol.figcaption[i])
             break;
 
         case "mandarin":
@@ -335,6 +346,7 @@ function switchLenguage(idioma) {
             th.forEach((thTable, i) => thTable.innerText = mandarin.th[i])
             td.forEach((tdTable, i) => tdTable.innerText = mandarin.td[i])
             doubtsTitles.forEach((t, i) => { t.innerHTML = mandarin.doubts[i] + icon })
+            figcaption.forEach((ele, i) => ele.innerText = mandarin.figcaption[i])
             break;
     }
 
