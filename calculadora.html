@@ -1,0 +1,69 @@
+<?php
+function calcularImpostoRenda($salarioBruto, $numeroDependentes) {
+    // Deduções
+    $deducaoDependentes = $numeroDependentes * 2000.0;
+
+    // Cálculo do Imposto de Renda
+    $baseCalculo = $salarioBruto - $deducaoDependentes;
+
+    if ($baseCalculo <= 1903.98) {
+        $imposto = 0.0;
+    } elseif ($baseCalculo <= 2826.65) {
+        $imposto = $baseCalculo * 0.075 - 142.8;
+    } elseif ($baseCalculo <= 3751.05) {
+        $imposto = $baseCalculo * 0.15 - 354.8;
+    } elseif ($baseCalculo <= 4664.68) {
+        $imposto = $baseCalculo * 0.225 - 636.13;
+    } else {
+        $imposto = $baseCalculo * 0.275 - 869.36;
+    }
+
+    return $imposto;
+}
+
+$impostoRenda = 0.0; // Definindo um valor inicial para a variável impostoRenda
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $salarioBruto = isset($_POST['wage']) ? $_POST['wage'] : 0;
+    $numeroDependentes = isset($_POST['numberPerson']) ? $_POST['numberPerson'] : 0;
+
+    // Agora você pode usar as variáveis $salarioBruto e $numeroDependentes para realizar o cálculo do Imposto de Renda ou qualquer outra operação necessária.
+    // Por exemplo:
+    $impostoRenda = calcularImpostoRenda($salarioBruto, $numeroDependentes);
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registre-se</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="shortcut icon" href="./assets/imgs/calc.png" type="image/x-icon">
+</head>
+
+<body>
+    <section>
+        <h1>Cálculo de Imposto de Renda</h1>
+        <form method="POST">
+            <label for="wage">Salário bruto</label>
+            <input type="number" name="wage" id="wage">
+            <label for="numberPerson">Número de dependentes</label>
+            <input type="number" name="numberPerson" id="numberPerson">
+            <button type="submit">Calcular</button>
+        </form>
+
+        <!-- <?php if ($_SERVER['REQUEST_METHOD'] === 'POST') : ?>
+        <?php if ($impostoRenda >= 0) : ?>
+        <p>O valor do Imposto de Renda é: R$
+            <?php echo number_format($impostoRenda, 2); ?>
+        </p>
+        <?php endif; ?>
+        <?php endif; ?> -->
+    </section>
+</body>
+
+</html>
