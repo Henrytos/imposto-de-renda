@@ -15,8 +15,8 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body>
-  <main id="Português">
+<body id="Português">
+  <main>
     <!-- CABEÇALHO -->
     <header>
       <div>
@@ -58,12 +58,13 @@
           </nav>
         </div>
         <nav>
-          <a href="#tabela" class="btn" id="focus">TABELA</a>
-          <a href="#local" class="btn">LOCAL</a>
-          <a href="#duvidas" class="btn">DÚVIDAS</a>
-          <a href="calculadora.html" class="btn">CALCULADORA</a>
-          <span class="font-size"><input type="range" id="vol" name="vol" min="1" max="32" value="16"></span>
-          <span class="languages">
+          <span><a href="#tabela" class="btn nav-bar-link-desktop" id="focus">TABELA</a></span>
+          <span><a href="#local" class="btn nav-bar-link-desktop">LOCAL</a></span>
+          <span><a href="#duvidas" class="btn nav-bar-link-desktop">DÚVIDAS</a></span>
+          <span><a href="calculadora.html" class="btn nav-bar-link-desktop">CALCULADORA</a></span>
+          <span class="font-size nav-bar-link-desktop"><input type="range" id="vol" name="vol" min="1" max="32"
+              value="16"></span>
+          <span class="languages nav-bar-link-desktop">
             <img src="./assets/imgs/bandeira/Português.png" alt="bandeira do brazil" id="bandeiras2">
             <select name="idioma" id="idioma2" class="languages-type">
               <option value="Português" id="Português" class="language">Português</option>
@@ -73,7 +74,9 @@
             </select>
             <i class="fa-solid fa-chevron-down" id="seta"></i>
           </span>
-          <sapn class="switch-theme">Switch Theme Dark/Light</sapn>
+          <span class="show-audio nav-bar-link-desktop">Audio-Discrição<i class="fa-solid fa-ear"
+              style="color: #f7f7f7;"></i></span>
+          <sapn class="switch-theme nav-bar-link-desktop">Switch Theme Dark/Light</sapn>
         </nav>
       </div>
     </header>
