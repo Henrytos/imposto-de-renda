@@ -402,3 +402,47 @@ function textSize() {
     document.documentElement.style.setProperty('--font-size-title', `${this.value * 2}px`)
     document.documentElement.style.setProperty('--font-size-title-doutbs', `${this.value * 1.1}px`)
 }
+
+const btnAudio = document.querySelector('.show-audio')
+let click = -1
+btnAudio.addEventListener('click', function () {
+    click++
+    var audioElements = [
+        new Audio('./audio/portugues/0.mp3'),
+        new Audio('./audio/portugues/1.mp3'),
+        new Audio('./audio/portugues/2.mp3'),
+        new Audio('./audio/portugues/3.mp3'),
+        new Audio('./audio/portugues/4.mp3'),
+        new Audio('./audio/portugues/5.mp3'),
+        new Audio('./audio/portugues/6.mp3'),
+        new Audio('./audio/portugues/7.mp3')
+
+    ];
+
+    var audioWords = textPage
+
+    audioWords.forEach(element => {
+        element.addEventListener('mouseover', showMp3)
+        element.addEventListener('mouseout', hideMp3)
+    })
+    function showMp3() {
+        audioWords.forEach((ele, i) => {
+            if (ele == this && click % 2 == 0) {
+                this.classList.add('showAudio')
+                audioElements[i].play()
+            }
+        })
+    }
+    function hideMp3() {
+        audioWords.forEach((ele, i) => {
+            if (ele == this && click % 2 == 0) {
+                this.classList.remove('showAudio')
+                audioElements[i].pause()
+                audioElements[i].currentTime = 0;
+            }
+        })
+
+
+    }
+
+});

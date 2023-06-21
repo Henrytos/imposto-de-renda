@@ -53,6 +53,12 @@ main {
   background-color: var(--color-litgh);
   border-radius: 10px;
 }
+/* Audio discrição */
+.showAudio {
+  background-color: rgb(105, 184, 158);
+  cursor: pointer;
+}
+
 /* ----------------cabeçalho --------------------*/
 header {
   display: flex;
@@ -384,7 +390,8 @@ footer > span > a:nth-child(5):hover {
   background-color: #2bb741;
 }
 /* switch-theme */
-.switch-theme {
+.switch-theme,
+.show-audio {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -396,7 +403,8 @@ footer > span > a:nth-child(5):hover {
   color: var(--color-litgh);
 }
 
-.switch-theme:hover {
+.switch-theme:hover,
+.show-audio:hover {
   background-color: var(--color-litgh);
   color: var(--color-dark);
 }
