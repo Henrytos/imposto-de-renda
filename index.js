@@ -408,14 +408,47 @@ let click = -1
 btnAudio.addEventListener('click', function () {
     click++
     var audioElements = [
-        new Audio('./audio/portugues/0.mp3'),
         new Audio('./audio/portugues/1.mp3'),
         new Audio('./audio/portugues/2.mp3'),
         new Audio('./audio/portugues/3.mp3'),
         new Audio('./audio/portugues/4.mp3'),
         new Audio('./audio/portugues/5.mp3'),
         new Audio('./audio/portugues/6.mp3'),
-        new Audio('./audio/portugues/7.mp3')
+        new Audio('./audio/portugues/7.mp3'),
+        new Audio('./audio/portugues/8.mp3'),
+        new Audio('./audio/portugues/9.mp3'),
+        new Audio('./audio/portugues/10.mp3'),
+        new Audio('./audio/portugues/11.mp3'),
+        new Audio('./audio/portugues/12.mp3'),
+        new Audio('./audio/portugues/13.mp3'),
+        new Audio('./audio/portugues/14.mp3'),
+        new Audio('./audio/portugues/15.mp3'),
+        new Audio('./audio/portugues/16.mp3'),
+        new Audio('./audio/portugues/17.mp3'),
+        new Audio('./audio/portugues/18.mp3'),
+        new Audio('./audio/portugues/19.mp3'),
+        new Audio('./audio/portugues/list-1.mp3'),
+        new Audio('./audio/portugues/list-2.mp3'),
+        new Audio('./audio/portugues/list-3.mp3'),
+        new Audio('./audio/portugues/list-4.mp3'),
+        new Audio('./audio/portugues/list-5.mp3'),
+        new Audio('./audio/portugues/list-6.mp3'),
+        new Audio('./audio/portugues/list-7.mp3'),
+        new Audio('./audio/portugues/list-7.5.mp3'),
+        new Audio('./audio/portugues/list-8.mp3'),
+        new Audio('./audio/portugues/list-9.mp3'),
+        new Audio('./audio/portugues/list-10.mp3'),
+        new Audio('./audio/portugues/list-11.mp3'),
+        new Audio('./audio/portugues/list-12.mp3'),
+        new Audio('./audio/portugues/list-13.mp3'),
+        new Audio('./audio/portugues/list-14.mp3'),
+        new Audio('./audio/portugues/list-15.mp3'),
+        new Audio('./audio/portugues/list-16.mp3'),
+        new Audio('./audio/portugues/list-17.mp3'),
+        new Audio('./audio/portugues/list-18.mp3'),
+        new Audio('./audio/portugues/list-19.mp3'),
+        new Audio('./audio/portugues/list-20.mp3'),
+        new Audio('./audio/portugues/list-21.mp3')
 
     ];
 
@@ -425,6 +458,8 @@ btnAudio.addEventListener('click', function () {
         element.addEventListener('mouseover', showMp3)
         element.addEventListener('mouseout', hideMp3)
     })
+
+
     function showMp3() {
         audioWords.forEach((ele, i) => {
             if (ele == this && click % 2 == 0) {
@@ -445,4 +480,11 @@ btnAudio.addEventListener('click', function () {
 
     }
 
+
+
+
+
 });
+
+const listPage = document.querySelectorAll('li')
+console.log(listPage)
