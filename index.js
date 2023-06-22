@@ -620,6 +620,8 @@ function textSize() {
         `${this.value * 1.1}px`
     );
 }
+const iconFooter = document.querySelectorAll("footer>span>a");
+const iframeSection = document.querySelectorAll("iframe")
 
 const btnAudio = document.querySelectorAll(".show-audio");
 let click = -1;
@@ -629,6 +631,8 @@ btnAudio.forEach((ele) => {
         if (!click % 2 == 0) {
             return false;
         }
+        var audioElementTitle = new Audio(`./audio/${body.id}/title.mp3`)
+
         var audioElements = [
             new Audio(`./audio/${body.id}/1.mp3`),
             new Audio(`./audio/${body.id}/2.mp3`),
@@ -698,21 +702,67 @@ btnAudio.forEach((ele) => {
         ];
 
         var audioElementsSubTitles = [
-            new Audio(`/audio/${body.id}/subTitle-1.mp3`),
-            new Audio(`/audio/${body.id}/subTitle-2.mp3`),
-            new Audio(`/audio/${body.id}/subTitle-3.mp3`),
-            new Audio(`/audio/${body.id}/subTitle-4.mp3`),
-            new Audio(`/audio/${body.id}/subTitle-5.mp3`)
+            new Audio(`./audio/${body.id}/subTitle-1.mp3`),
+            new Audio(`./audio/${body.id}/subTitle-2.mp3`),
+            new Audio(`./audio/${body.id}/subTitle-3.mp3`),
+            new Audio(`./audio/${body.id}/subTitle-4.mp3`),
+            new Audio(`./audio/${body.id}/subTitle-5.mp3`)
         ]
         var audioElementsNavLinks = [
-            new Audio(`/audio/${body.id}/nav-link-1.mp3`),
-            new Audio(`/audio/${body.id}/nav-link-2.mp3`),
-            new Audio(`/audio/${body.id}/nav-link-3.mp3`),
-            new Audio(`/audio/${body.id}/nav-link-4.mp3`),
-            new Audio(`/audio/${body.id}/nav-link-5.mp3`),
-            new Audio(`/audio/${body.id}/nav-link-6.mp3`),
-            new Audio(`/audio/${body.id}/nav-link-7.mp3`),
-            new Audio(`/audio/${body.id}/nav-link-8.mp3`)
+            new Audio(`./audio/${body.id}/nav-link-1.mp3`),
+            new Audio(`./audio/${body.id}/nav-link-2.mp3`),
+            new Audio(`./audio/${body.id}/nav-link-3.mp3`),
+            new Audio(`./audio/${body.id}/nav-link-4.mp3`),
+            new Audio(`./audio/${body.id}/nav-link-5.mp3`),
+            new Audio(`./audio/${body.id}/nav-link-6.mp3`),
+            new Audio(`./audio/${body.id}/nav-link-7.mp3`),
+            new Audio(`./audio/${body.id}/nav-link-8.mp3`)
+        ]
+
+        var audioElementsdoubtsTitles = [
+            new Audio(`./audio/${body.id}/doubtsTitles-1.mp3`),
+            new Audio(`./audio/${body.id}/doubtsTitles-2.mp3`),
+            new Audio(`./audio/${body.id}/doubtsTitles-3.mp3`),
+            new Audio(`./audio/${body.id}/doubtsTitles-4.mp3`),
+        ]
+        // tabela
+        var audioElementsThead = [
+            new Audio(`./audio/${body.id}/Thead-1.mp3`),
+            new Audio(`./audio/${body.id}/Thead-2.mp3`),
+            new Audio(`./audio/${body.id}/Thead-3.mp3`),
+
+        ]
+        var audioElementsTdate = [
+            new Audio(`./audio/${body.id}/Tdate-1.mp3`),
+            new Audio(`./audio/${body.id}/Tdate-2.mp3`),
+            new Audio(`./audio/${body.id}/Tdate-3.mp3`),
+            new Audio(`./audio/${body.id}/Tdate-4.mp3`),
+            new Audio(`./audio/${body.id}/Tdate-5.mp3`),
+            new Audio(`./audio/${body.id}/Tdate-6.mp3`),
+            new Audio(`./audio/${body.id}/Tdate-7.mp3`),
+            new Audio(`./audio/${body.id}/Tdate-8.mp3`),
+            new Audio(`./audio/${body.id}/Tdate-9.mp3`),
+            new Audio(`./audio/${body.id}/Tdate-10.mp3`),
+            new Audio(`./audio/${body.id}/Tdate-11.mp3`),
+            new Audio(`./audio/${body.id}/Tdate-12.mp3`),
+            new Audio(`./audio/${body.id}/Tdate-13.mp3`),
+            new Audio(`./audio/${body.id}/Tdate-14.mp3`),
+            new Audio(`./audio/${body.id}/Tdate-15.mp3`),
+
+        ]
+        var audioElementsIcons = [
+            new Audio(`./audio/${body.id}/icon-1.mp3`),
+            new Audio(`./audio/${body.id}/icon-2.mp3`),
+            new Audio(`./audio/${body.id}/icon-3.mp3`),
+            new Audio(`./audio/${body.id}/icon-4.mp3`),
+            new Audio(`./audio/${body.id}/icon-5.mp3`),
+
+        ]
+        var audioElementsIframe = [
+            new Audio(`./audio/${body.id}/iframe-1.mp3`),
+            new Audio(`./audio/${body.id}/iframe-2.mp3`),
+            new Audio(`./audio/${body.id}/iframe-3.mp3`),
+
         ]
         console.log(body.id);
 
@@ -793,13 +843,10 @@ btnAudio.forEach((ele) => {
             });
         }
         const navBar = document.querySelectorAll(".nav-bar-link-desktop")
-        console.log(navBar)
-
         navBar.forEach(link => {
             link.addEventListener("mouseover", showMp3Link);
             link.addEventListener("mouseout", hideMp3Link);
         })
-
         function showMp3Link() {
             navBar.forEach((ele, i) => {
                 if (ele == this && click % 2 == 0) {
@@ -818,6 +865,139 @@ btnAudio.forEach((ele) => {
                 }
             });
         }
-    });
+        doubtsTitles.forEach(title => {
+            title.addEventListener("mouseover", showMp3doubtsTitles);
+            title.addEventListener("mouseout", hideMp3doubtsTitles);
+        })
+        function showMp3doubtsTitles() {
+            doubtsTitles.forEach((ele, i) => {
+                if (ele == this && click % 2 == 0) {
+                    this.classList.add("showAudio");
+                    audioElementsdoubtsTitles[i].play();
+                }
+            }
+            )
+        }
+        function hideMp3doubtsTitles() {
+            doubtsTitles.forEach((ele, i) => {
+                if (ele == this && click % 2 == 0) {
+                    this.classList.remove("showAudio");
+                    audioElementsdoubtsTitles[i].pause();
+                    audioElementsdoubtsTitles[i].currentTime = 0;
+                }
+            });
+        }
+        th.forEach(ele => {
+            ele.addEventListener("mouseover", showMp3Thead)
+            ele.addEventListener("mouseout", hideMp3Thead)
+        })
+        function showMp3Thead() {
+            th.forEach((ele, i) => {
+                if (ele == this && click % 2 == 0) {
+                    this.classList.add("showAudio");
+                    audioElementsThead[i].play();
+
+                }
+            })
+        }
+        function hideMp3Thead() {
+            th.forEach((ele, i) => {
+                if (ele == this && click % 2 == 0) {
+                    this.classList.remove("showAudio");
+                    audioElementsThead[i].pause();
+                    audioElementsThead[i].currentTime = 0;
+                }
+            })
+        }
+        td.forEach((ele, i) => {
+            ele.addEventListener("mouseover", showMp3Tdate)
+            ele.addEventListener("mouseout", hideMp3Tdate)
+        })
+        function showMp3Tdate() {
+            td.forEach((tdate, i) => {
+                if (tdate == this && click % 2 == 0) {
+                    this.classList.add("showAudio");
+                    audioElementsTdate[i].play();
+                }
+            })
+        }
+        function hideMp3Tdate() {
+            td.forEach((tdate, i) => {
+                if (tdate == this && click % 2 == 0) {
+                    this.classList.remove("showAudio");
+                    audioElementsTdate[i].pause();
+                    audioElementsTdate[i].currentTime = 0;
+                }
+            })
+        }
+
+
+        iconFooter.forEach(icon => {
+            icon.addEventListener("mouseover", showMp3SocialMidia);
+            icon.addEventListener("mouseout", hideMp3SocialMidia);
+        })
+        function showMp3SocialMidia() {
+            iconFooter.forEach((icon, i) => {
+                if (icon == this && click % 2 == 0) {
+                    this.classList.add("showAudio")
+                    audioElementsIcons[i].play();
+                }
+            })
+        }
+
+        function hideMp3SocialMidia() {
+            iconFooter.forEach((icon, i) => {
+                if (icon == this && click % 2 == 0) {
+                    this.classList.remove("showAudio");
+                    audioElementsIcons[i].pause();
+                    audioElementsIcons[i].currentTime = 0;
+                }
+            })
+        }
+
+        iframeSection.forEach(ifra => {
+            ifra.addEventListener("mouseover", showMp3Iframe)
+            ifra.addEventListener("mouseout", hideMp3Iframe)
+        })
+
+        function showMp3Iframe() {
+            iframeSection.forEach((iframe, i) => {
+                if (iframe == this && click % 2 == 0) {
+                    this.classList.add("showAudio")
+                    audioElementsIframe[i].play();
+                }
+            })
+        }
+        function hideMp3Iframe() {
+            iframeSection.forEach((iframe, i) => {
+                if (iframe == this && click % 2 == 0) {
+                    this.classList.remove("showAudio");
+                    audioElementsIframe[i].pause();
+                    audioElementsIframe[i].currentTime = 0;
+                }
+            })
+        }
+
+        title.addEventListener("mouseover", showMp3Title)
+        title.addEventListener("mouseout", hideMp3Title)
+        function showMp3Title() {
+            if (click % 2 == 0) {
+                this.classList.add("showAudio")
+                audioElementTitle.play();
+            }
+        }
+        function hideMp3Title() {
+            if (click % 2 == 0) {
+                this.classList.remove("showAudio");
+                audioElementTitle.pause();
+                audioElementTitle.currentTime = 0;
+            }
+        }
+    }
+    );
+
 });
 
+console.log(iconFooter)
+console.log(th)
+console.log(td)
