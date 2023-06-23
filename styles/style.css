@@ -162,6 +162,7 @@ header > div > nav {
 #seta {
   color: var(--color-litgh);
 }
+
 /* seleciona o idioma */
 nav > .languages {
   display: flex;
@@ -208,7 +209,6 @@ nav > .languages {
 main > section {
   margin: auto;
   padding: 30px;
-
   width: 50vw;
   height: auto;
   display: flex;
@@ -294,6 +294,7 @@ figcaption {
 }
 
 /* Duvidas */
+
 main > section > section > article {
   background-color: var(--color-litgh);
   color: var(--color-dark);
@@ -314,6 +315,7 @@ main > section > section > article > h4 {
   justify-content: space-between;
   font-size: var(--font-size-title-doutbs);
 }
+
 main > section > section > article > div {
   display: none;
   transition: 0.5s ease-in-out;
@@ -323,16 +325,14 @@ main > section > section > article > h3 > i {
   transform: rotate(-90deg);
   transform: translateY(3px);
 }
-ul {
-  transform: translateX(20px);
+.doubts-3 > div > ul {
+  padding-left: 30px;
 }
 ul > li {
   padding: 5px;
   font-size: var(--font-size-text);
 }
-main > section > section > article > div > ul {
-  transform: translateX(60px);
-}
+
 /*------------------Rodapé--------------------*/
 footer {
   display: flex;
@@ -391,7 +391,7 @@ footer > span > a:nth-child(5):hover {
 }
 /* switch-theme */
 .switch-theme,
-.show-audio {
+#volume {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -403,11 +403,11 @@ footer > span > a:nth-child(5):hover {
   color: var(--color-litgh);
 }
 
-.switch-theme:hover,
-.show-audio:hover {
+.switch-theme:hover {
   background-color: var(--color-litgh);
   color: var(--color-dark);
 }
+
 /*-------- Estilização mobile----------- */
 
 .nav-list {
@@ -439,12 +439,8 @@ footer > span > a:nth-child(5):hover {
     width: 60vw;
   }
 }
+
 @media (max-width: 1500px) {
-  main > section {
-    width: 70vw;
-  }
-}
-@media (max-width: 1300px) {
   html {
     scroll-behavior: smooth;
     scroll-padding-top: 150px;
@@ -454,6 +450,8 @@ footer > span > a:nth-child(5):hover {
   }
   main > section {
     width: 90vw !important;
+    padding: 15px;
+    margin: auto;
   }
   body {
     overflow-x: hidden;
@@ -524,6 +522,7 @@ footer > span > a:nth-child(5):hover {
     --font-size-text: 0.8rem;
     --font-size-title: 2rem;
     --font-size-sub-title: 1.2rem;
+    --font-size-title-doutbs: 14px;
     --blur-low: 2.5px;
     --blur-hard: 10px;
   }

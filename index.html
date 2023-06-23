@@ -43,7 +43,8 @@
 
 
               </li>
-              <li class="show-audio">Audio-Discrição<i class="fa-solid fa-ear" style="color: #f7f7f7;"></i></li>
+              <li class="show-audio" id="volume"><img id="volumeIcon" src="./assets/icons/volume_white.png" width="30px"
+                  alt=""></li>
               <li><span class="font-size"><input type="range" id="vol" name="vol" min="8" max="24" value="16"></span>
               </li>
               <li>
@@ -51,8 +52,9 @@
               </li>
               <li><a href="#tabela" class="btn">TABELA</a></li>
               <li><a href="#local" class="btn">LOCAL</a></li>
+              <li><a href="#funciona" class="btn">FUNCIONAMENTO</a></li>
               <li><a href="#duvidas" class="btn">DÚVIDAS</a></li>
-              <li><a href="calculadora.html" class="btn">CALCULADORA</a></li>
+              <li><a href="./calculadora.php" class="btn">CALCULADORA</a></li>
 
             </ul>
           </nav>
@@ -60,8 +62,9 @@
         <nav>
           <span><a href="#tabela" class="btn nav-bar-link-desktop" id="focus">TABELA</a></span>
           <span><a href="#local" class="btn nav-bar-link-desktop">LOCAL</a></span>
+          <span><a href="#funciona" class="btn nav-bar-link-desktop">FUNCIONAMENTO</a></span>
           <span><a href="#duvidas" class="btn nav-bar-link-desktop">DÚVIDAS</a></span>
-          <span><a href="calculadora.html" class="btn nav-bar-link-desktop">CALCULADORA</a></span>
+          <span><a href="./calculadora.php" class="btn nav-bar-link-desktop">CALCULADORA</a></span>
           <span class="font-size nav-bar-link-desktop"><input type="range" id="vol" name="vol" min="1" max="32"
               value="16"></span>
           <span class="languages nav-bar-link-desktop">
@@ -74,9 +77,9 @@
             </select>
             <i class="fa-solid fa-chevron-down" id="seta"></i>
           </span>
-          <span class="show-audio nav-bar-link-desktop">Audio-Discrição<i class="fa-solid fa-ear"
-              style="color: #f7f7f7;"></i></span>
-          <sapn class="switch-theme nav-bar-link-desktop">Switch Theme Dark/Light</sapn>
+          <span class="show-audio nav-bar-link-desktop" id="volume"><img id="volumeIcon"
+              src="./assets/icons/volume_white.png" width="30px" alt=""></span>
+          <sapn class="switch-theme nav-bar-link-desktop">Dark/Light</sapn>
         </nav>
       </div>
     </header>
@@ -216,7 +219,7 @@
         <figcaption>Localização do Banco</figcaption>
       </section>
       <!-- Como funciona o cálculo do Imposto de Renda -->
-      <section class="container-3">
+      <section class="container-3" id="funciona">
         <h2>Como funciona o cálculo do Imposto de Renda</h2>
         <p>Para se chegar à base de cálculo do Imposto de Renda, é preciso fazer algumas deduções no salário bruto, que
           são:</p>

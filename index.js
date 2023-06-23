@@ -28,7 +28,7 @@ let main =
 let selectElement = "";
 let bandeira = "";
 console.log(main);
-if (main > 1300) {
+if (main > 1500) {
     selectElement = document.getElementById("idioma2");
 
     bandeira = document.getElementById("bandeiras2");
@@ -74,7 +74,7 @@ function colorTextLeanguage(selectedOption) {
 }
 const title = document.querySelector("header > div > div > span");
 // [0,1,2,3] [TABELA ,LOCAL ,DÚVIDAS ,CALCULADORA]
-const navLinks = document.querySelectorAll("nav>a");
+const navLinks = document.querySelectorAll("nav>span>a");
 // [0,1,2,3] [TABELA ,LOCAL ,DÚVIDAS ,CALCULADORA]
 const navLinksMobile = document.querySelectorAll(".nav-list li a");
 // [0,1,2,3,4]
@@ -103,6 +103,7 @@ const td = document.querySelectorAll("td");
 
 const Português = {
     title: ["Imposto de renda"],
+
     subTitles: [
         "O que é Imposto de Renda (IRPF)?",
         "Tabela de Imposto de Renda",
@@ -131,7 +132,7 @@ const Português = {
         "Quem entregar, com atraso, a declaração está sujeito a multa.",
         "Segundo a Receita Federal, a multa é de 1% ao mês, sobre o tributo devido, limitado a 20% do valor devido a ser pago. Ademais, o valor mínimo da multa é de R$ 165,74.",
     ],
-    links: ["TABELA", "LOCAL", "DÚVIDAS", "CALCULADORA"],
+    links: ["TABELA", "LOCAL", "FUNCIONAMENTO", "DÚVIDAS", "CALCULADORA"],
     list: [
         "Contribuição para o INSS;",
         "Número de dependentes legais (R$ 189,59 por cada um);",
@@ -211,7 +212,7 @@ const Espanhol = {
         "Quienes presenten la declaración con retraso están sujetos a una multa.",
         "Según la Agencia Tributaria, la multa es del 1% mensual sobre el impuesto adeudado, con un límite del 20% del valor adeudado a pagar. Además, el importe mínimo de la multa es de R$ 165,74.",
     ],
-    links: ["TABLA", "LOCALIZACIÓN", "DUDAS", "CALCULADORA"],
+    links: ["TABLA", "LOCALIZACIÓN", "OPERACIÓN", "DUDAS", "CALCULADORA"],
     list: [
         "Contribución al INSS;",
         "Número de dependientes legales (R$ 189,59 por cada uno);",
@@ -291,7 +292,7 @@ const Inglês = {
         "Those who file the declaration late are subject to a fine.",
         "According to the Tax Agency, the fine is 1% per month on the tax owed, with a limit of 20% of the owed value to be paid. In addition, the minimum amount of the fine is R$ 165.74.",
     ],
-    links: ["TABLE", "LOCATION", "DOUBTS", "CALCULATOR"],
+    links: ["TABLE", "LOCATION", "OPERATION", "DOUBTS", "CALCULATOR"],
     list: [
         "INSS Contribution;",
         "Number of legal dependents (R$ 189.59 for each one);",
@@ -372,7 +373,7 @@ const mandarin = {
         "根据联邦税务局的规定,罚款为每月 1%,按应缴税款计算,最高为应缴税款的 20%。此外,罚款的最低金额为 165.74 雷亚尔。",
     ],
 
-    links: ["表格", "位置", "疑问", "计算器"],
+    links: ["表格", "位置", "手术", "疑问", "计算器"],
     list: [
         "INSS贡献;",
         "法定受抚养人人数（每人 189.59 雷亚尔）；",
@@ -580,6 +581,10 @@ function switchThemeDarkLigth() {
         );
         document.querySelector("header>div>div>img").src =
             "./assets/imgs/logo-leão-ligth.png";
+        document.querySelectorAll("#volumeIcon").forEach(icon => icon.src = "./assets/icons/volume_dark.png")
+
+
+
     } else {
         document.documentElement.style.setProperty("--color-litgh", "#f5f5f5");
         document.documentElement.style.setProperty("--color-dark", "#000");
@@ -593,6 +598,10 @@ function switchThemeDarkLigth() {
         );
         document.querySelector("header>div>div>img").src =
             "./assets/imgs/logo-leão-dark.png";
+        document.querySelectorAll("#volumeIcon").forEach(icon => icon.src = "./assets/icons/volume_white.png")
+
+
+
     }
 
     i++;
@@ -683,6 +692,7 @@ btnAudio.forEach((ele) => {
             new Audio(`./audio/${body.id}/list-4.mp3`),
             new Audio(`./audio/${body.id}/list-5.mp3`),
             new Audio(`./audio/${body.id}/list-6.mp3`),
+            new Audio(`./audio/${body.id}/funcionamento.mp3`),
             new Audio(`./audio/${body.id}/list-7.mp3`),
             new Audio(`./audio/${body.id}/list-8.mp3`),
             new Audio(`./audio/${body.id}/list-9.mp3`),
@@ -711,6 +721,7 @@ btnAudio.forEach((ele) => {
         var audioElementsNavLinks = [
             new Audio(`./audio/${body.id}/nav-link-1.mp3`),
             new Audio(`./audio/${body.id}/nav-link-2.mp3`),
+            new Audio(`./audio/${body.id}/funcionamento.mp3`),
             new Audio(`./audio/${body.id}/nav-link-3.mp3`),
             new Audio(`./audio/${body.id}/nav-link-4.mp3`),
             new Audio(`./audio/${body.id}/nav-link-5.mp3`),
