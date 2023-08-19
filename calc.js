@@ -1,41 +1,30 @@
+let liquido = 0;
+let deducao = 0;
 
-
-function validatePassword(password) {
-    if (
-        password.length < 8 ||
-        !password.match(/[a-z]/) ||
-        !password.match(/[A-Z]/) ||
-        !password.match(/[0-9]/) ||
-        !password.match(/[^a-zA-Z0-9\s]/)
-    ) {
-        const err = new Error('Senha inválida.')
-        err.input = 'password'
-        throw err
-    }
+function calculete(bruto) {
+  if (bruto < 1903.98) {
+  } else if (bruto < 2826.65) {
+    deducao = bruto * 0.075;
+    liquido = bruto - deducao;
+  } else if (bruto < 3751.05) {
+    deducao = bruto * 0.15;
+    liquido = bruto - deducao;
+  } else if (bruto < 4664.68) {
+    deducao = bruto * 0.225;
+    liquido = bruto - deducao;
+  } else {
+    deducao = bruto * 0.275;
+    liquido = bruto - deducao;
+  }
 }
 
-function resetFormStyles() {
-    Object.entries(userInputs).forEach(([key, value]) => {
-        value.classList.remove('success', 'error')
-        document.querySelector(`#${key}-error`).textContent = ''
-    })
-}
+document.querySelector("form").addEventListener("submit", (ev) => {
+  ev.preventDefault();
 
-const userInputs = {}
-
-userInputs.wage = document.querySelector('#wage')
-userInputs.numberPerson = document.querySelector('#numberPerson')
-
-const form = document.querySelector('form')
-
-form.addEventListener('submit', (ev) => {
-    ev.preventDefault()
-    resetFormStyles()
-    try {
-        userInputs.wage.classList.add('success')
-        userInputs.numberPerson.classList.add('success')
-    } catch (err) {
-        userInputs[err.input].classList.add('error')
-        document.querySelector(`#${err.input}-error`).textContent = err.message
-    }
-})
+  const bruto = document.getElementById("wage").value;
+  calculete(bruto);
+  const tr = document.querySelectorAll("#row td");
+  tr[0].innerText = `R$${bruto},00`;
+  tr[1].innerText = `- R$${deducao},00`;
+  tr[2].innerText = `R$${liquido},00`;
+});
